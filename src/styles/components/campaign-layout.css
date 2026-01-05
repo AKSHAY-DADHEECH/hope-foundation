@@ -1,0 +1,100 @@
+/* HERO */
+.campaign-hero {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.campaign-hero-overlay {
+  height: 100%;
+  width:100%;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.campaign-hero h1 {
+  color: #fff;
+  font-size: 52px;
+  
+}
+
+/* CONTENT */
+.campaign-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 40px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* DONATE CTA */
+.campaign-donate {
+  background: #f5f5f5;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.campaign-donate h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.campaign-donate p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.campaign-donate .donate-btn {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.campaign-content {
+  width: 100%;
+  background: #ffffff;
+  padding: 90px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.campaign-content p {
+  max-width: 1050px;
+  text-align:justify;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #222;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 900px) {
+  .campaign-hero {
+    height: auto;              /* zoom problem fix */
+    min-height: 36vh;
+    background-size: cover;    /* ⭐ PURI IMAGE DIKHEGI */
+    background-position: center top;
+    background-repeat: no-repeat;
+    object-fit: contain; 
+  }
+
+  .campaign-content {
+    flex-direction: column;
+  }
+
+  .campaign-hero-overlay {
+    padding: 2rem;
+    
+  }
+}

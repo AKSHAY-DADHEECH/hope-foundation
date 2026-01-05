@@ -1,0 +1,205 @@
+/* ================= RESET ================= */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= DESKTOP HEADER ================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 0 3rem;
+}
+
+/* TOP ROW */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  width: 100%;
+}
+
+/* LOGO */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 90px;
+}
+
+/* DESKTOP NAV */
+.desktop-nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-links span {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* DONATE BUTTON */
+.nav-links .donate-btn {
+  background: #f05a5a;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+}
+
+/* ================= DESKTOP DROPDOWN (FIXED) ================= */
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 200;
+
+  /* 🔥 HOVER FIX */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.25s ease 3s,
+    transform 0.25s ease 3s,
+    visibility 0s linear 3s; /* delay hide */
+}
+
+.dropdown li {
+  padding: 10px 14px;
+}
+
+.dropdown li a {
+  color: #333;
+}
+
+/* SHOW DROPDOWN ON HOVER (LI OR MENU) */
+.nav-links li:hover > .dropdown,
+.dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+/* ================= HIDE MOBILE ELEMENTS ON DESKTOP ================= */
+
+.menu-toggle,
+.mobile-donate,
+.mobile-nav {
+  display: none;
+}
+
+/* ================= MOBILE HEADER ================= */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 0;
+  }
+
+  .header-top {
+    height: auto;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* LOGO */
+  .logo img {
+    height: 60px;
+    width: auto;
+  }
+
+  /* MENU TOGGLE */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* DONATE BUTTON */
+  .mobile-donate {
+    display: inline-block;
+    background: #f05a5a;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  /* HIDE DESKTOP NAV */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* MOBILE MENU */
+  .mobile-nav {
+    display: none;
+    background: #fff;
+    border-top: 1px solid #ddd;
+  }
+
+  .mobile-nav.open {
+    display: block;
+  }
+
+  .mobile-nav ul {
+    padding: 10px 16px;
+  }
+
+  .mobile-nav li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  /* MOBILE SUBMENU */
+  .mobile-submenu {
+    padding-left: 16px;
+    margin-top: 6px;
+  }
+
+  .mobile-submenu li {
+    padding: 6px 0;
+    border-bottom: none;
+    font-size: 14px;
+  }
+}

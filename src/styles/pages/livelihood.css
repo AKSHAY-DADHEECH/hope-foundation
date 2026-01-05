@@ -1,0 +1,79 @@
+/* ===== HERO SECTION ===== */
+.livelihood-hero {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay */
+.livelihood-hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.livelihood-hero-overlay h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.livelihood-hero-overlay p {
+  color: #fff;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* ===== CONTENT SECTION ===== */
+.livelihood-content {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 5rem;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+/* Right image */
+.livelihood-image {
+  flex: 1;
+}
+
+.livelihood-image img {
+  width: 100%;
+  height: auto;              /* 👈 IMAGE CUT FIX */
+  border-radius: 12px;
+  object-fit: contain;       /* 👈 NO CROP */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .livelihood-hero {
+    height: auto;              /* zoom problem fix */
+    min-height: 36vh;
+    background-size: cover;    /* ⭐ PURI IMAGE DIKHEGI */
+    background-position: center top;
+    background-repeat: no-repeat;
+    object-fit: contain; 
+  }
+
+  .livelihood-content {
+    flex-direction: column;
+  }
+
+  .livelihood-hero-overlay {
+    padding: 2rem;
+  }
+
+  .livelihood-hero-overlay h1 {
+    font-size: 2rem;
+  }
+}

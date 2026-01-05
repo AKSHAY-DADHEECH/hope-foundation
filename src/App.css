@@ -1,0 +1,24 @@
+/* App.css - App-level styling */
+main {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+.hero-slider {
+  width: 100%;
+  max-width: 100%;
+}

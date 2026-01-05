@@ -1,0 +1,57 @@
+/* ===== HERO SECTION ===== */
+.impact-hero {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* ===== CONTENT SECTION ===== */
+.impact-content {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 5rem;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+/* Image Section */
+.impact-image {
+  flex: 1;
+}
+
+.impact-image img {
+  width: 100%;
+  height: auto;  
+   background-size: contain;      /* IMAGE CUT FIX */
+  border-radius: 12px;
+   background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  object-fit: contain; /* NO CROP */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .impact-content {
+    flex-direction: column;
+  }
+   .impact-hero {
+    height: auto;              /* zoom problem fix */
+    min-height: 20vh;
+    background-size: contain;    /* ⭐ PURI IMAGE DIKHEGI */
+    background-position: center top;
+    background-repeat: no-repeat;
+    object-fit: contain; 
+  }
+  .impact-image{
+    height: auto;              /* zoom problem fix */
+    min-height: 36vh;
+    background-size: contain;    /* ⭐ PURI IMAGE DIKHEGI */
+    background-position: center top;
+    background-repeat: no-repeat;
+    object-fit: contain; 
+  }
+}

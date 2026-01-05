@@ -1,0 +1,40 @@
+.donate-amount {
+  padding: 3rem 5rem;
+  text-align: center;
+}
+
+.donate-amount h2 {
+  margin-bottom: 1.5rem;
+}
+
+.amount-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.amount-options button {
+  padding: 0.8rem 1.8rem;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.amount-options .active {
+  background: #6dbb1a;
+  color: #fff;
+  border-color: #6dbb1a;
+}
+
+.donate-amount input {
+  width: 280px;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.text-child{
+  text-align: center;
+}

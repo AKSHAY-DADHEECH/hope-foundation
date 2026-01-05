@@ -1,0 +1,105 @@
+/* ===== HERO SECTION ===== */
+.education-hero {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay */
+.education-hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.education-hero-overlay h1 {
+  color: #fff;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.education-hero-overlay p {
+  color: #fff;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* ===== CONTENT SECTION ===== */
+.education-content {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 5rem;
+  align-items: center;
+  background: #f9f9f9;
+}
+
+/* Left text */
+.education-text {
+  flex: 1;
+}
+
+.education-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.education-text p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.education-text ul {
+  padding-left: 1.2rem;
+}
+
+.education-text li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+/* Right image */
+.education-image {
+  flex: 1;
+}
+
+.education-image img {
+  width: 100%;
+  height: auto;              /* 👈 IMAGE CUT FIX */
+  border-radius: 12px;
+  object-fit: contain;       /* 👈 NO CROP */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .education-hero {
+    height: auto;              /* zoom problem fix */
+    min-height: 36vh;
+    background-size: cover;    /* ⭐ PURI IMAGE DIKHEGI */
+    background-position: center top;
+    background-repeat: no-repeat;
+    object-fit: contain; 
+  }
+
+  .education-content {
+    flex-direction: column;
+  }
+
+  .education-hero-overlay {
+    padding: 2rem;
+  }
+
+  .education-hero-overlay h1 {
+    font-size: 2rem;
+  }
+}
+

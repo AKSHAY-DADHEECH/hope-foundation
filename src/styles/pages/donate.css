@@ -1,0 +1,13 @@
+.donate-content {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 5rem;
+  background: #fff;
+}
+
+@media (max-width: 900px) {
+  .donate-content {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+}

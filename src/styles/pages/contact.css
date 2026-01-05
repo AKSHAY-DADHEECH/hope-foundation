@@ -1,0 +1,180 @@
+/* ================= HERO SECTION ================= */
+.contact-hero {
+  width: 100%;
+  background-image: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+}
+
+/* DARK OVERLAY */
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.contact-hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.contact-hero-overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ================= BREADCRUMB ================= */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.breadcrumb a {
+  color: #6dbb1a;
+  text-decoration: none;
+}
+
+.breadcrumb svg {
+  color: #6dbb1a;
+}
+
+.breadcrumb .active {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ================= MAIN CONTENT ================= */
+.contact-content {
+  display: flex;
+  gap: 3rem;
+  padding: 4rem 5rem;
+  background: #fff;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+}
+
+/* ================= FORM ================= */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-form-row input {
+  flex: 1;
+}
+
+/* ================= VISIT US ================= */
+.visit-us {
+  padding: 4rem 5rem;
+}
+
+.city-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.city-tabs button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.city-tabs .active {
+  background: #6dbb1a;
+  color: #fff;
+}
+
+.office-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.office-card {
+  border: 1px solid #e5e5e5;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.recaptcha-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.recaptcha-box input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 4px;
+  appearance: none;
+  display: flex;               /* ⭐ */
+  align-items: center;         /* ⭐ */
+  justify-content: center;     /* ⭐ */
+}
+
+.recaptcha-box input[type="checkbox"]:checked::after {
+  content: "✓";
+  font-size: 16px;
+  line-height: 1;
+  color: #000;
+}
+
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 900px) {
+
+  /* HERO FIX */
+  .contact-hero {
+    padding: 3rem 1.5rem;
+    background-size: contain;     /* ✅ FULL IMAGE */
+    background-position: center;
+  }
+
+  .contact-hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  /* CONTENT STACK */
+  .contact-content {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+
+  /* OFFICE CARDS */
+  .office-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-us {
+    padding: 2rem 1.5rem;
+  }
+}
